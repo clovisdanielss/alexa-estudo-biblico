@@ -1,0 +1,38 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "estudo biblico",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "InicioEstudoIntent",
+          "slots": [],
+          "samples": [
+            "Gostaria de fazer um estudo bíblico",
+            "Abrir estudo bíblico",
+            "Ola gostaria de um estudo",
+            "Um estudo  por favor",
+            "Preciso fazer um estudo bíblico"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "3"
+}
