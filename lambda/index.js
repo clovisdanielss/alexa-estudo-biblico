@@ -22,7 +22,7 @@ const LaunchRequestHandler = {
 const HelloWorldIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'EstudoBiblicoIntent';
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'InicioEstudoIntent';
     },
     handle(handlerInput) {
         const speakOutput = 'Vamos começar nosso estudo!';
