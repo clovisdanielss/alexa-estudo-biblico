@@ -27,6 +27,15 @@
           ]
         },
         {
+          "name": "Basico.ConfirmacaoIntent",
+          "slots":[],
+          "samples":[
+            "Sim.",
+            "Concoordo",
+            "Positivo"
+          ]
+        },
+        {
           "name": "AMAZON.NavigateHomeIntent",
           "samples": []
         }

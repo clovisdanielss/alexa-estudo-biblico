@@ -4,5 +4,6 @@ module.exports = function getIntentsHandlersArray(Alexa){
     }
     return[
         require('./InicioEstudo/InicioEstudo')(Alexa),
+        require('./Basico/ConfirmacaoIntent/ConfirmacaoIntent')(Alexa)
     ]
 }
