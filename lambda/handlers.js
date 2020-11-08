@@ -3,7 +3,8 @@ module.exports = function getIntentsHandlersArray(Alexa){
         throw Error('Alexa must not be null nor undefined');
     }
     return[
-        require('./InicioEstudo/InicioEstudo')(Alexa),
-        require('./Basico/ConfirmacaoIntent/ConfirmacaoIntent')(Alexa)
+        require('./LaunchRequestHandler/inicioEstudo')(Alexa),
+        require('./IntentsHandlers/Introducao/introducao')(Alexa)
+        
     ]
 }

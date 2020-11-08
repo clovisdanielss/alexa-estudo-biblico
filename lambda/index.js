@@ -4,23 +4,8 @@
  * session persistence, api calls, and more.
  * */
 const Alexa = require("ask-sdk-core");
-const GetIntentsHandlers = require("./IntentsHandlers/IntentsHandlers");
+const GetIntentsHandlers = require("./handlers");
 
-const LaunchRequestHandler = {
-  canHandle(handlerInput) {
-    return (
-      Alexa.getRequestType(handlerInput.requestEnvelope) === "LaunchRequest"
-    );
-  },
-  handle(handlerInput) {
-    const speakOutput = "Oba, fico muito feliz que você decidiu estudar a bíblia comigo.";
-
-    return handlerInput.responseBuilder
-      .speak(speakOutput)
-      .reprompt(speakOutput)
-      .getResponse();
-  },
-};
 
 const HelpIntentHandler = {
   canHandle(handlerInput) {
@@ -150,7 +135,6 @@ let builder = Alexa.SkillBuilders.custom();
 let handlers = GetIntentsHandlers(Alexa);
 
 handlers = handlers.concat([
-  LaunchRequestHandler,
   HelpIntentHandler,
   CancelAndStopIntentHandler,
   FallbackIntentHandler,

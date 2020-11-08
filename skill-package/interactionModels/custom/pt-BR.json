@@ -1,47 +1,67 @@
 {
   "interactionModel": {
-    "languageModel": {
-      "invocationName": "estudo biblico",
-      "intents": [
-        {
-          "name": "AMAZON.CancelIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.HelpIntent",
-          "samples": []
-        },
-        {
-          "name": "AMAZON.StopIntent",
-          "samples": []
-        },
-        {
-          "name": "InicioEstudoIntent",
-          "slots": [],
-          "samples": [
-            "Gostaria de fazer um estudo bíblico",
-            "Abrir estudo bíblico",
-            "Ola gostaria de um estudo",
-            "Um estudo  por favor",
-            "Preciso fazer um estudo bíblico"
+      "languageModel": {
+          "invocationName": "estudo biblico",
+          "intents": [
+              {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+              },
+              {
+                  "name": "BasicoConfirmacaoIntent",
+                  "slots": [],
+                  "samples": [
+                      "Sim.",
+                      "Concoordo",
+                      "Positivo"
+                  ]
+              },
+              {
+                  "name": "AMAZON.NavigateHomeIntent",
+                  "samples": []
+              },
+              {
+                  "name": "IntroducaoIntent",
+                  "slots": [
+                      {
+                          "name": "estudo",
+                          "type": "estudo"
+                      }
+                  ],
+                  "samples": [
+                      "A lição de hoje é {estudo}",
+                      "{estudo}",
+                      "Eu quero estudar {estudo}",
+                      "Gostaria de fazer o estudo {estudo}"
+                  ]
+              }
+          ],
+          "types": [
+              {
+                  "name": "estudo",
+                  "values": [
+                      {
+                          "id": "0",
+                          "name": {
+                              "value": "A Bíblia Sagrada",
+                              "synonyms": [
+                                  "a palavra de Deus",
+                                  "o livro sagrado",
+                                  "a bíblia"
+                              ]
+                          }
+                      }
+                  ]
+              }
           ]
-        },
-        {
-          "name": "Basico.ConfirmacaoIntent",
-          "slots":[],
-          "samples":[
-            "Sim.",
-            "Concoordo",
-            "Positivo"
-          ]
-        },
-        {
-          "name": "AMAZON.NavigateHomeIntent",
-          "samples": []
-        }
-      ],
-      "types": []
-    }
-  },
-  "version": "3"
+      }
+  }
 }

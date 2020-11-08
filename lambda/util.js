@@ -17,3 +17,12 @@ module.exports.getS3PreSignedUrl = function getS3PreSignedUrl(s3ObjectKey) {
     return s3PreSignedUrl;
 
 }
+
+module.exports.getCannonicalSlotValue = function getCannonicalSlotValue(slot){
+    if(slot.resolutions 
+        && slot.resolutions.resolutionsPerAuthority
+        && slot.resolutions.resolutionsPerAuthority[0].values)
+        return slot.resolutions.resolutionsPerAuthority[0].values[0].value.name;
+    else
+        throw Error("Cannonical value not detected.")
+}
