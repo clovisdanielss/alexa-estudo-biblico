@@ -29,7 +29,7 @@ module.exports = (Alexa) => {
       let slot = getSlot(handlerInput.requestEnvelope, "estudo");
       let slotCanonicalValue = getCannonicalSlotValue(slot);
 
-      let estado = criarEstado(intentNames.Introducao, slotCanonicalValue);
+      let estado = criarEstado(intentNames.Introducao, slotCanonicalValue, 0);
 
       handlerInput.attributesManager.setSessionAttributes(estado);
 

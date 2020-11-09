@@ -8,6 +8,7 @@ const message = require("./message");
 const { checarSeResposta } = require("../../checarSeResposta");
 const { ABibliaSagrada } = require("../../../Parametros/estudosNames");
 const { criarEstado } = require("../../../Modelos/estado");
+const { checarSePergunta } = require("../../checarSePergunta");
 
 /**
  * Todo estudo bíblico passa a priore pela intenção de introdução.
@@ -20,17 +21,8 @@ module.exports = (Alexa) => {
   return {
     canHandle(handlerInput) {
       return (
-        checarSeResposta(handlerInput, 1, estudosNames.ABibliaSagrada) ||
-        (handlerInput.attributesManager.getSessionAttributes()[
-          estadoNames.PresentStudy
-        ] === estudosNames.ABibliaSagrada &&
-          handlerInput.attributesManager.getSessionAttributes()[
-            estadoNames.PrevIntent
-          ] === intentNames.Introducao &&
-          Alexa.getRequestType(handlerInput.requestEnvelope) ===
-            "IntentRequest" &&
-          Alexa.getIntentName(handlerInput.requestEnvelope) ===
-            intentNames.Confirmacao)
+        checarSeResposta(handlerInput, estudosNames.ABibliaSagrada, 1) ||
+        checarSePergunta(handlerInput, estudosNames.ABibliaSagrada, 1)
       );
     },
     handle(handlerInput) {
@@ -47,8 +39,8 @@ module.exports = (Alexa) => {
 };
 
 function questionBehavior(handlerInput) {
-  let estado = criarEstado(null,estudosNames.ABibliaSagrada,1)
-  if (checarSeResposta(handlerInput, 1, estudosNames.ABibliaSagrada)) {
+  let estado = criarEstado(null, estudosNames.ABibliaSagrada, 1);
+  if (checarSeResposta(handlerInput, estudosNames.ABibliaSagrada, 1)) {
     handlerInput.attributesManager.setSessionAttributes(estado);
     return "Isso foi uma resposta";
   } else {
