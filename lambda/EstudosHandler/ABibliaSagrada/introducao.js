@@ -10,4 +10,5 @@ module.exports =
 + " Por abraçarem essas verdades, blasfemos já se tornaram reverentes, ébrios se tornaram sóbrios,"
 + "criminosos se tornaram confiáveis, ladrões se tornaram honestos, adúlteros se tornaram puros."
 + " O que torna a Bíblia tão especial ? De onde vem seu poder ? Que valor tem ela para o homem atual ?"
-+ " Essas são perguntas que serão respondidas nesse estudo." 
++ " Essas são perguntas que serão respondidas nesse estudo."
++ " Então, posso ir para a primeira questão ?"

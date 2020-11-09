@@ -1,8 +1,7 @@
-const intentNames = require('../intentNames');
-const paramNames = require('../paramNames');
+const intentNames = require('../Parametros/intentNames');
+const estadoNames = require('../Parametros/estadoNames');
 const message = require('./message');
-
-Intents = require('../intentNames');
+const { criarEstado } = require('../Modelos/estado');
 
 module.exports = (Alexa) => {
   return {
@@ -14,9 +13,9 @@ module.exports = (Alexa) => {
     handle(handlerInput) {
       const speakOutput = message;
 
-      handlerInput.attributesManager.setSessionAttributes({
-        [paramNames.PrevIntent]: intentNames.InicioEstudo,
-      });
+      let estado = criarEstado(intentNames.InicioEstudo)
+      
+      handlerInput.attributesManager.setSessionAttributes(estado);
 
       return handlerInput.responseBuilder
         .speak(speakOutput)
