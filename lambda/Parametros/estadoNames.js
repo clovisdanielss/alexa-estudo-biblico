@@ -1,6 +1,6 @@
 module.exports = {
-    PrevIntent : "PrevIntent",
-    PresentStudy : "PresentStudy",
-    Question: "Question",
-    IsResponse: "IsResponse"
+    IntencaoAnterior : "PrevIntent",
+    EstudoAtual : "PresentStudy",
+    Pergunta: "Question",
+    IsResposta: "IsResponse"
 }

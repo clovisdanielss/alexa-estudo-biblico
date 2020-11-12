@@ -2,9 +2,9 @@ const estadoNames = require("../Parametros/estadoNames")
 
 module.exports.criarEstado = function criarEstado(prevIntent, presentStudy, question, isResponse){
     return {
-        [estadoNames.PrevIntent]: prevIntent,
-        [estadoNames.PresentStudy]: presentStudy,
-        [estadoNames.Question]: question,
-        [estadoNames.IsResponse]: isResponse,
+        [estadoNames.IntencaoAnterior]: prevIntent,
+        [estadoNames.EstudoAtual]: presentStudy,
+        [estadoNames.Pergunta]: question,
+        [estadoNames.IsResposta]: isResponse,
     }
 }

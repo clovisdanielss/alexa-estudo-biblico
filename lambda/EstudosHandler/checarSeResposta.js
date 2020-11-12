@@ -7,12 +7,12 @@ const estadoNames = require("../Parametros/estadoNames")
  */
 module.exports.checarSeResposta = function checarSeResposta(handlerInput,presentStudy,question){
     return  handlerInput.attributesManager.getSessionAttributes()[
-        estadoNames.PresentStudy
+        estadoNames.EstudoAtual
       ] === presentStudy &&
       handlerInput.attributesManager.getSessionAttributes()[
-        estadoNames.Question
+        estadoNames.Pergunta
       ] === question &&
       handlerInput.attributesManager.getSessionAttributes()[
-        estadoNames.IsResponse
+        estadoNames.IsResposta
       ] === true;
 }

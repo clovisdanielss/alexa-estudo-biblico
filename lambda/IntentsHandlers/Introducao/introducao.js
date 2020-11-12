@@ -17,7 +17,7 @@ module.exports = (Alexa) => {
     canHandle(handlerInput) {
       return (
         handlerInput.attributesManager.getSessionAttributes()[
-          estadoNames.PrevIntent
+          estadoNames.IntencaoAnterior
         ] === intentNames.InicioEstudo &&
         Alexa.getRequestType(handlerInput.requestEnvelope) ===
           "IntentRequest" &&

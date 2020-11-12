@@ -5,6 +5,7 @@ module.exports = function getIntentsHandlersArray(Alexa){
     return[
         require('./LaunchRequestHandler/inicioEstudo')(Alexa),
         require('./IntentsHandlers/Introducao/introducao')(Alexa),
-        require('./EstudosHandler/ABibliaSagrada/PrimeiraPergunta/primeiraPergunta')(Alexa)
+        require('./EstudosHandler/ABibliaSagrada/PrimeiraPergunta/primeiraPergunta')(Alexa),
+        require('./EstudosHandler/ABibliaSagrada/SegundaPergunta/segundaPergunta')(Alexa)
     ]
 }

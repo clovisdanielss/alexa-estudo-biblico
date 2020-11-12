@@ -6,10 +6,10 @@ module.exports.checarSePergunta = function checarSePergunta(handlerInput,  prese
   try{
   return (
     handlerInput.attributesManager.getSessionAttributes()[
-      estadoNames.PresentStudy
+      estadoNames.EstudoAtual
     ] === presentStudy &&
     handlerInput.attributesManager.getSessionAttributes()[
-      estadoNames.Question
+      estadoNames.Pergunta
     ] === question - 1 &&
     getRequestType(handlerInput.requestEnvelope) === "IntentRequest" &&
     getIntentName(handlerInput.requestEnvelope) === intentNames.Confirmacao
